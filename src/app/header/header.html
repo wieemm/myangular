@@ -1,0 +1,10 @@
+
+
+<p>Nombre de clics sur Supprimer : <strong>{{ deleteCount }}</strong></p>
+
+
+<h1 (click)="delete()" style="cursor: pointer;">{{ title }}</h1>
+
+<button (click)="rename()">Renommer</button>
+
+<button [disabled]="!title.includes('wiam')" (click)="delete()">Supprimer</button>
