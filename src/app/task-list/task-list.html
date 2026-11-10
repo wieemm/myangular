@@ -1,0 +1,13 @@
+<h2>Ma liste dess tâches</h2>
+
+
+@if (tasks.length === 0) {
+  <p class="empty">Aucune tâche pour l'instant</p>
+} @else {
+  <ul>
+    @for (task of tasks; track task.id) {
+      <li>{{ task.title }}</li>
+    }
+  </ul>
+}
+<button (click)="viderListe()">Vider la liste</button>
